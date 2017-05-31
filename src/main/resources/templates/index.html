@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Persons for DB</title>
+
+
+</head>
+<body>
+
+<div class="container">
+    
+    <div th:if="${not #lists.isEmpty(persons)}">
+        <ul th:each="person: ${persons}">
+            <li th:text="${person.firstName} + ' ' + ${person.lastName}">
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>
